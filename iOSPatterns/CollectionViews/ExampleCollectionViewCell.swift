@@ -10,5 +10,7 @@ import UIKit
 
 class ExampleCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var label: UILabel!
+    override func prepareForReuse() {
+        print("PrepareForReuse")
+    }
 }

@@ -21,9 +21,16 @@ class IntrinsicSizingViewController: UIViewController, UICollectionViewDataSourc
     
     //let data = ["Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu."]
     
-    let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum","Lorem ipsum", "Lorem ipsum"]
+    //let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum","Lorem ipsum", "Lorem ipsum"]
     
-    //let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum dolor sit er elit lamet,","Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"]
+    let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum dolor sit er elit lamet,","Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"]
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        horizontalVerticalPressed(self)
+        columnsPressed(self)
+    }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -65,6 +72,8 @@ class IntrinsicSizingViewController: UIViewController, UICollectionViewDataSourc
         return cell
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         //7. return cell size from ViewController
@@ -75,8 +84,7 @@ class IntrinsicSizingViewController: UIViewController, UICollectionViewDataSourc
             cellHeight = size.height
             collectionViewHeight.constant = cellHeight
         }
-        
-        //return CGSize(width: cellWidth, height: cellHeight)
+    
         return size
     }
     
@@ -95,7 +103,7 @@ class IntrinsicSizingViewController: UIViewController, UICollectionViewDataSourc
         default:
             columns = 1
         }
-        collectionView.reloadData()
+        //TODO: find out how to show changes to columns after switch
     }
     
 
@@ -110,7 +118,6 @@ class IntrinsicSizingViewController: UIViewController, UICollectionViewDataSourc
             default:
                 break
             }
-            collectionView.reloadData()
         }
     }
 }
