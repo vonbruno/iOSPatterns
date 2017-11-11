@@ -1,5 +1,5 @@
 //
-//  IntrinsicSizingViewController.swift
+//  ViewControllerBasedCollectionview.swift
 //  iOSPatterns
 //
 //  Created by Bruno, Nathan on 1/7/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntrinsicSizingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ViewControllerBasedCollectionview: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var horizontalOrVeritcal: UISegmentedControl!
@@ -71,8 +71,6 @@ class IntrinsicSizingViewController: UIViewController, UICollectionViewDataSourc
         }
         return cell
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

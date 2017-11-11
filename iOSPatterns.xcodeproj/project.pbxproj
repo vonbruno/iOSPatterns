@@ -14,8 +14,10 @@
 		CE74EB7F1E27EA59007B924F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE74EB7D1E27EA59007B924F /* LaunchScreen.storyboard */; };
 		CE74EB8A1E27EA59007B924F /* iOSPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB891E27EA59007B924F /* iOSPatternsTests.swift */; };
 		CE74EB971E27EB56007B924F /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB941E27EB56007B924F /* ExampleCollectionViewCell.swift */; };
-		CE74EB981E27EB56007B924F /* IntrinsicSizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB951E27EB56007B924F /* IntrinsicSizingViewController.swift */; };
+		CE74EB981E27EB56007B924F /* ViewControllerBasedCollectionview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB951E27EB56007B924F /* ViewControllerBasedCollectionview.swift */; };
 		CE74EB991E27EB56007B924F /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB961E27EB56007B924F /* LabelViewController.swift */; };
+		CE7B6C761EAE4F7A008C8294 /* StandardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B6C751EAE4F7A008C8294 /* StandardCollectionViewController.swift */; };
+		CE7B6C781EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B6C771EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +42,10 @@
 		CE74EB891E27EA59007B924F /* iOSPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSPatternsTests.swift; sourceTree = "<group>"; };
 		CE74EB8B1E27EA59007B924F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE74EB941E27EB56007B924F /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleCollectionViewCell.swift; path = CollectionViews/ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
-		CE74EB951E27EB56007B924F /* IntrinsicSizingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntrinsicSizingViewController.swift; path = CollectionViews/IntrinsicSizingViewController.swift; sourceTree = "<group>"; };
+		CE74EB951E27EB56007B924F /* ViewControllerBasedCollectionview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerBasedCollectionview.swift; path = CollectionViews/ViewControllerBasedCollectionview.swift; sourceTree = "<group>"; };
 		CE74EB961E27EB56007B924F /* LabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelViewController.swift; path = CollectionViews/LabelViewController.swift; sourceTree = "<group>"; };
+		CE7B6C751EAE4F7A008C8294 /* StandardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardCollectionViewController.swift; sourceTree = "<group>"; };
+		CE7B6C771EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrinsicSizeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +90,7 @@
 				CE74EB741E27EA59007B924F /* AppDelegate.swift */,
 				CE74EB761E27EA59007B924F /* ViewController.swift */,
 				CE74EB781E27EA59007B924F /* Main.storyboard */,
-				CE74EB9A1E27EBB1007B924F /* Collection Views */,
+				CE74EB9A1E27EBB1007B924F /* Intrinsic sizing */,
 				CE74EB7B1E27EA59007B924F /* Assets.xcassets */,
 				CE74EB7D1E27EA59007B924F /* LaunchScreen.storyboard */,
 				CE74EB801E27EA59007B924F /* Info.plist */,
@@ -103,14 +107,16 @@
 			path = iOSPatternsTests;
 			sourceTree = "<group>";
 		};
-		CE74EB9A1E27EBB1007B924F /* Collection Views */ = {
+		CE74EB9A1E27EBB1007B924F /* Intrinsic sizing */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B6C751EAE4F7A008C8294 /* StandardCollectionViewController.swift */,
 				CE74EB941E27EB56007B924F /* ExampleCollectionViewCell.swift */,
-				CE74EB951E27EB56007B924F /* IntrinsicSizingViewController.swift */,
+				CE74EB951E27EB56007B924F /* ViewControllerBasedCollectionview.swift */,
 				CE74EB961E27EB56007B924F /* LabelViewController.swift */,
+				CE7B6C771EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift */,
 			);
-			name = "Collection Views";
+			name = "Intrinsic sizing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,11 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE74EB981E27EB56007B924F /* IntrinsicSizingViewController.swift in Sources */,
+				CE74EB981E27EB56007B924F /* ViewControllerBasedCollectionview.swift in Sources */,
 				CE74EB991E27EB56007B924F /* LabelViewController.swift in Sources */,
+				CE7B6C781EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift in Sources */,
 				CE74EB971E27EB56007B924F /* ExampleCollectionViewCell.swift in Sources */,
 				CE74EB771E27EA59007B924F /* ViewController.swift in Sources */,
 				CE74EB751E27EA59007B924F /* AppDelegate.swift in Sources */,
+				CE7B6C761EAE4F7A008C8294 /* StandardCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
