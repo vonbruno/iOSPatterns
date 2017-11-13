@@ -18,6 +18,10 @@
 		CE74EB991E27EB56007B924F /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB961E27EB56007B924F /* LabelViewController.swift */; };
 		CE7B6C761EAE4F7A008C8294 /* StandardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B6C751EAE4F7A008C8294 /* StandardCollectionViewController.swift */; };
 		CE7B6C781EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B6C771EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift */; };
+		CECDB3D51FB6AC9F00466A18 /* CTAButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB3D31FB6AC9F00466A18 /* CTAButtonViewController.swift */; };
+		CECDB3D61FB6AC9F00466A18 /* CTAButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECDB3D41FB6AC9F00466A18 /* CTAButtonViewController.xib */; };
+		CECDB3D81FB6B38A00466A18 /* CTAButtonDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB3D71FB6B38A00466A18 /* CTAButtonDemoViewController.swift */; };
+		CECDB3DA1FB7DC0100466A18 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB3D91FB7DC0100466A18 /* CTAButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		CE74EB961E27EB56007B924F /* LabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelViewController.swift; path = CollectionViews/LabelViewController.swift; sourceTree = "<group>"; };
 		CE7B6C751EAE4F7A008C8294 /* StandardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardCollectionViewController.swift; sourceTree = "<group>"; };
 		CE7B6C771EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrinsicSizeCollectionViewCell.swift; sourceTree = "<group>"; };
+		CECDB3D31FB6AC9F00466A18 /* CTAButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonViewController.swift; sourceTree = "<group>"; };
+		CECDB3D41FB6AC9F00466A18 /* CTAButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTAButtonViewController.xib; sourceTree = "<group>"; };
+		CECDB3D71FB6B38A00466A18 /* CTAButtonDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonDemoViewController.swift; sourceTree = "<group>"; };
+		CECDB3D91FB7DC0100466A18 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 				CE74EB741E27EA59007B924F /* AppDelegate.swift */,
 				CE74EB761E27EA59007B924F /* ViewController.swift */,
 				CE74EB781E27EA59007B924F /* Main.storyboard */,
+				CECDB3DB1FB7E1F500466A18 /* CTAButton */,
 				CE74EB9A1E27EBB1007B924F /* Intrinsic sizing */,
 				CE74EB7B1E27EA59007B924F /* Assets.xcassets */,
 				CE74EB7D1E27EA59007B924F /* LaunchScreen.storyboard */,
@@ -117,6 +126,17 @@
 				CE7B6C771EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift */,
 			);
 			name = "Intrinsic sizing";
+			sourceTree = "<group>";
+		};
+		CECDB3DB1FB7E1F500466A18 /* CTAButton */ = {
+			isa = PBXGroup;
+			children = (
+				CECDB3D71FB6B38A00466A18 /* CTAButtonDemoViewController.swift */,
+				CECDB3D31FB6AC9F00466A18 /* CTAButtonViewController.swift */,
+				CECDB3D41FB6AC9F00466A18 /* CTAButtonViewController.xib */,
+				CECDB3D91FB7DC0100466A18 /* CTAButton.swift */,
+			);
+			name = CTAButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +227,7 @@
 				CE74EB7F1E27EA59007B924F /* LaunchScreen.storyboard in Resources */,
 				CE74EB7C1E27EA59007B924F /* Assets.xcassets in Resources */,
 				CE74EB7A1E27EA59007B924F /* Main.storyboard in Resources */,
+				CECDB3D61FB6AC9F00466A18 /* CTAButtonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,11 +245,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECDB3DA1FB7DC0100466A18 /* CTAButton.swift in Sources */,
 				CE74EB981E27EB56007B924F /* ViewControllerBasedCollectionview.swift in Sources */,
 				CE74EB991E27EB56007B924F /* LabelViewController.swift in Sources */,
 				CE7B6C781EAE5393008C8294 /* IntrinsicSizeCollectionViewCell.swift in Sources */,
+				CECDB3D51FB6AC9F00466A18 /* CTAButtonViewController.swift in Sources */,
 				CE74EB971E27EB56007B924F /* ExampleCollectionViewCell.swift in Sources */,
 				CE74EB771E27EA59007B924F /* ViewController.swift in Sources */,
+				CECDB3D81FB6B38A00466A18 /* CTAButtonDemoViewController.swift in Sources */,
 				CE74EB751E27EA59007B924F /* AppDelegate.swift in Sources */,
 				CE7B6C761EAE4F7A008C8294 /* StandardCollectionViewController.swift in Sources */,
 			);

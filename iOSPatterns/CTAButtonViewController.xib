@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTAButtonViewController" customModule="iOSPatterns" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="fG7-6x-lot" id="6Ag-4T-UDL"/>
+                <outlet property="buttonHeightConstraint" destination="4YK-cV-2SS" id="U93-Q1-cdA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="visualEffectView" destination="WTy-lf-c9h" id="4Q9-xw-YTT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="167"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTy-lf-c9h">
+                    <rect key="frame" x="0.0" y="55" width="370" height="112"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fvI-OZ-swp">
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG7-6x-lot">
+                    <rect key="frame" x="16" y="71" width="338" height="80"/>
+                    <color key="backgroundColor" red="0.27305459980000002" green="0.59466034170000004" blue="0.86885410549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="4YK-cV-2SS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fG7-6x-lot" secondAttribute="bottom" constant="16" id="2kq-H8-lxX"/>
+                <constraint firstItem="WTy-lf-c9h" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="3TO-lJ-mDQ"/>
+                <constraint firstItem="fG7-6x-lot" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9sD-57-vjh"/>
+                <constraint firstItem="WTy-lf-c9h" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="F0n-uE-h7U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fG7-6x-lot" secondAttribute="bottom" priority="750" id="e32-3P-hJx"/>
+                <constraint firstItem="WTy-lf-c9h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="epx-R8-7dy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fG7-6x-lot" secondAttribute="trailing" constant="16" id="kGa-wd-2ld"/>
+                <constraint firstItem="fG7-6x-lot" firstAttribute="top" secondItem="WTy-lf-c9h" secondAttribute="top" constant="16" id="zfQ-A7-JgZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="91" y="303.5"/>
+        </view>
+    </objects>
+</document>
