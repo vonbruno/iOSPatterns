@@ -15,15 +15,15 @@ class ViewControllerBasedCollectionview: UIViewController, UICollectionViewDataS
     @IBOutlet weak var numberOfColumns: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var columns: CGFloat = 1
+    var columns: CGFloat = 2
     var cellHeight: CGFloat = 0.0
     var cellWidth: CGFloat = 0.0
     
     //let data = ["Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu."]
     
-    //let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum","Lorem ipsum", "Lorem ipsum"]
+    let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum","Lorem ipsum", "Lorem ipsum"]
     
-    let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum dolor sit er elit lamet,","Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"]
+    //let data = ["Lorem ipsum","Lorem ipsum", "Lorem ipsum","Lorem ipsum dolor sit er elit lamet,","Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -57,17 +57,17 @@ class ViewControllerBasedCollectionview: UIViewController, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExampleCell", for: indexPath)
 
         //2. Instantiate the viewcontroller for the cell
-        let labelVC = LabelViewController.fromStoryboard()
-        //3. Call .view to instantiate the IBOutlets before setting them
-        if let labelview = labelVC?.view {
-            //Optional: set content in the VC
-            labelVC?.label.text = data[indexPath.item]
-            //4. Set the width constraint for the VC
-            labelVC?.widthConstraint.constant = cellWidth
-            //5. Set the frame of the VC
-            labelview.frame = cell.bounds
+        if let labelVC = LabelViewController.fromStoryboard() {
+            //2. add childViewController so that proper lifecycle methods are called on labelVC.
+            self.addChildViewController(labelVC)
+            //5. Set the frame of the VC (Call .view to instantiate the IBOutlets before setting them)
+            labelVC.view.frame = cell.bounds
             //6. Add VC as subview to the cell
-            cell.addSubview(labelview)
+            cell.addSubview(labelVC.view)
+            //Optional: set content in the VC
+            labelVC.label.text = data[indexPath.item]
+            //4. Set the width constraint for the VC
+            labelVC.widthConstraint.constant = cellWidth
         }
         return cell
     }
@@ -102,6 +102,7 @@ class ViewControllerBasedCollectionview: UIViewController, UICollectionViewDataS
             columns = 1
         }
         //TODO: find out how to show changes to columns after switch
+        self.collectionView.reloadData()
     }
     
 
@@ -116,6 +117,7 @@ class ViewControllerBasedCollectionview: UIViewController, UICollectionViewDataS
             default:
                 break
             }
+            self.collectionView.reloadData()
         }
     }
 }

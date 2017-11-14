@@ -15,7 +15,7 @@ class CTAButtonDemoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        ctaButton = CTAButton(parentViewController: self, title: "Purchase", color: .green)
+        ctaButton = CTAButton(parentViewController: self, title: "Purchase", color: #colorLiteral(red: 0.2730545998, green: 0.5946603417, blue: 0.8688541055, alpha: 1))
     }
     
 }
