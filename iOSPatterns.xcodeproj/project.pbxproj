@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE247A7E224E794D00D594E7 /* InsertRemoveAnimationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE247A7D224E794D00D594E7 /* InsertRemoveAnimationCollectionViewController.swift */; };
 		CE74EB751E27EA59007B924F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB741E27EA59007B924F /* AppDelegate.swift */; };
 		CE74EB771E27EA59007B924F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74EB761E27EA59007B924F /* ViewController.swift */; };
 		CE74EB7A1E27EA59007B924F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE74EB781E27EA59007B924F /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE247A7D224E794D00D594E7 /* InsertRemoveAnimationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertRemoveAnimationCollectionViewController.swift; sourceTree = "<group>"; };
 		CE74EB711E27EA59007B924F /* iOSPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE74EB741E27EA59007B924F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE74EB761E27EA59007B924F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7B6C751EAE4F7A008C8294 /* StandardCollectionViewController.swift */,
+				CE247A7D224E794D00D594E7 /* InsertRemoveAnimationCollectionViewController.swift */,
 				CE74EB941E27EB56007B924F /* ExampleCollectionViewCell.swift */,
 				CE74EB951E27EB56007B924F /* ViewControllerBasedCollectionview.swift */,
 				CE74EB961E27EB56007B924F /* LabelViewController.swift */,
@@ -189,7 +192,7 @@
 				TargetAttributes = {
 					CE74EB701E27EA59007B924F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = B925XRQ7V7;
+						DevelopmentTeam = S3P4GEXK45;
 						ProvisioningStyle = Automatic;
 					};
 					CE74EB841E27EA59007B924F = {
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE247A7E224E794D00D594E7 /* InsertRemoveAnimationCollectionViewController.swift in Sources */,
 				CECDB3DA1FB7DC0100466A18 /* CTAButton.swift in Sources */,
 				CE74EB981E27EB56007B924F /* ViewControllerBasedCollectionview.swift in Sources */,
 				CE74EB991E27EB56007B924F /* LabelViewController.swift in Sources */,
@@ -393,7 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B925XRQ7V7;
+				DEVELOPMENT_TEAM = S3P4GEXK45;
 				INFOPLIST_FILE = iOSPatterns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vonbruno.iOSPatterns;
@@ -406,7 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B925XRQ7V7;
+				DEVELOPMENT_TEAM = S3P4GEXK45;
 				INFOPLIST_FILE = iOSPatterns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vonbruno.iOSPatterns;
