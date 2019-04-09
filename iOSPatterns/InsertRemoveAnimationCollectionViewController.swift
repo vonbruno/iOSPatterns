@@ -56,16 +56,10 @@ class InsertRemoveAnimationCollectionViewController: UICollectionViewController,
     //Remove Cell
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell = collectionView.cellForItem(at: indexPath)
-        UIView.animate(withDuration: 0.2, animations: {
-            cell?.alpha = 0
-        }) { (yes) in
-            collectionView.performBatchUpdates({
-                self.data.remove(at: indexPath.row)
-                collectionView.deleteItems(at: [indexPath])
-                
-            }, completion: nil)
-        }
+        collectionView.performBatchUpdates({
+            self.data.remove(at: indexPath.row)
+            collectionView.deleteItems(at: [indexPath])
+        }, completion: nil)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,28 +76,41 @@ class HiroFlowLayout : UICollectionViewFlowLayout {
         super.prepare(forCollectionViewUpdates: updateItems)
         
         insertingCellIndexPaths.removeAll()
+        removingCellIndexPaths.removeAll()
         
         for update in updateItems {
             if let indexPath = update.indexPathAfterUpdate,
                 update.updateAction == .insert {
                 insertingCellIndexPaths.append(indexPath)
             }
+            if let indexPath = update.indexPathBeforeUpdate, update.updateAction == .delete {
+                removingCellIndexPaths.append(indexPath)
+            }
         }
     }
     
     override func finalizeCollectionViewUpdates() {
         super.finalizeCollectionViewUpdates()
-        
         insertingCellIndexPaths.removeAll()
+        removingCellIndexPaths.removeAll()
     }
     
     override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
-        
+
         if insertingCellIndexPaths.contains(itemIndexPath) {
             attributes?.frame = CGRect(x: 0, y: 100.0, width: collectionView!.bounds.width, height: 0)
+            attributes?.alpha = 1.0
         }
+
         return attributes
     }
 
+    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let attributes = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath)
+        if removingCellIndexPaths.contains(itemIndexPath) {
+            attributes?.frame = CGRect(x: 0, y: 110, width: collectionView!.bounds.width, height: 0)
+        }
+        return attributes
+    }
 }
